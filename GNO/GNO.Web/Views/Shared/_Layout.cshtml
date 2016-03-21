@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="gnoapp">
+    <head>
+        <meta charset="utf-8" />
+        <title>@ViewBag.Title</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        @Scripts.Render("~/bundles/angular")
+        @Scripts.Render("~/bundles/app")
+       
+    </head>
+    <body >
+       
+        @RenderBody()
+
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                </div>
+            </div>
+        </footer>
+      
+    
+        @Scripts.Render("~/bundles/jquery") 
+        @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    </body> 
+</html>
